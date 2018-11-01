@@ -3,11 +3,23 @@
     "tasks": [
         {
             "label": "Build Client",
-            "command": "dotnet",
+            "command": "xbuild",
             "type": "process",
             "args": [
-                "build",
                 "${workspaceFolder}/Example/Example.csproj"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run Client",
+            "command": "mono",
+            "type": "process",
+            "args": [
+                "${workspaceFolder}/Example/bin/Debug/Example.exe"
             ],
             "problemMatcher": "$msCompile",
             "group": {
