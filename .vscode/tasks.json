@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run Everything", // <-- Bind this task to a key
+            "label": "Build & Run Client", // <-- Bind this task to a key
             "type": "process",
             "command": "bash",
             "problemMatcher": "$msCompile",
