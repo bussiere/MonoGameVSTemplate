@@ -2,6 +2,19 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Run Everything", // <-- Bind this task to a key
+            "type": "process",
+            "command": "bash",
+            "problemMatcher": "$msCompile",
+            "args": [
+                "${workspaceFolder}/run.sh"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+          },
+        {
             "label": "Build Client",
             "command": "xbuild",
             "type": "process",
@@ -25,7 +38,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
         }
     ]
 }
